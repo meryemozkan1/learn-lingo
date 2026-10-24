@@ -1,0 +1,362 @@
+[
+  {
+    "id": "1",
+    "name": "Alice",
+    "surname": "Johnson",
+    "languages": ["English", "French"],
+    "levels": ["A1 Beginner", "A2 Elementary", "B1 Intermediate"],
+    "rating": 4.9,
+    "reviews": [
+      {
+        "reviewer_name": "Sarah M.",
+        "reviewer_rating": 5,
+        "comment": "Alice is an exceptional teacher! Her lessons are engaging, well-structured, and she adapts perfectly to my learning pace."
+      },
+      {
+        "reviewer_name": "James K.",
+        "reviewer_rating": 5,
+        "comment": "My English improved drastically in just 2 months. Highly recommend!"
+      }
+    ],
+    "price_per_hour": 30,
+    "lessons_done": 1375,
+    "avatar_url": "https://api.dicebear.com/7.x/personas/svg?seed=Alice&backgroundColor=b6e3f4",
+    "lesson_info": "I work with students who want to develop their English language skills for professional or academic purposes.",
+    "conditions": [
+      "Teaches students from 16 years old",
+      "Specializes in Business English",
+      "Offers trial lessons"
+    ],
+    "experience": "I have 7 years of experience teaching English and French to students of all levels. I hold a CELTA certificate and a Master's degree in Linguistics."
+  },
+  {
+    "id": "2",
+    "name": "Marcus",
+    "surname": "Williams",
+    "languages": ["German", "English"],
+    "levels": ["B1 Intermediate", "B2 Upper-Intermediate", "C1 Advanced"],
+    "rating": 4.8,
+    "reviews": [
+      {
+        "reviewer_name": "Elena P.",
+        "reviewer_rating": 5,
+        "comment": "Marcus has an incredible ability to explain complex grammar in simple ways. Best German teacher I've had!"
+      },
+      {
+        "reviewer_name": "Tom B.",
+        "reviewer_rating": 4,
+        "comment": "Very professional and patient. Lessons are always well-prepared."
+      }
+    ],
+    "price_per_hour": 35,
+    "lessons_done": 820,
+    "avatar_url": "https://api.dicebear.com/7.x/personas/svg?seed=Marcus&backgroundColor=d1d4f9",
+    "lesson_info": "My lessons focus on conversational fluency and real-world language use. I tailor each session to your specific goals.",
+    "conditions": [
+      "Works with all age groups",
+      "Exam preparation (Goethe, TestDaF)",
+      "Flexible scheduling"
+    ],
+    "experience": "Native German speaker with 5 years of teaching experience. I specialize in helping B1+ students reach advanced fluency."
+  },
+  {
+    "id": "3",
+    "name": "Sofia",
+    "surname": "Garcia",
+    "languages": ["Spanish", "Portuguese"],
+    "levels": ["A1 Beginner", "A2 Elementary", "B1 Intermediate", "B2 Upper-Intermediate"],
+    "rating": 5.0,
+    "reviews": [
+      {
+        "reviewer_name": "Anna W.",
+        "reviewer_rating": 5,
+        "comment": "Sofia is absolutely wonderful! She makes learning Spanish so fun and natural. I went from zero to conversational in 3 months."
+      },
+      {
+        "reviewer_name": "Chris L.",
+        "reviewer_rating": 5,
+        "comment": "Incredibly patient and encouraging. Her passion for the language is contagious!"
+      }
+    ],
+    "price_per_hour": 28,
+    "lessons_done": 2100,
+    "avatar_url": "https://api.dicebear.com/7.x/personas/svg?seed=Sofia&backgroundColor=ffdfbf",
+    "lesson_info": "I create a comfortable, immersive environment where you learn Spanish or Portuguese naturally through real conversations.",
+    "conditions": [
+      "Teaches all ages",
+      "DELE/CELPE-Bras exam prep",
+      "Cultural immersion approach"
+    ],
+    "experience": "Born in Madrid, I have been teaching Spanish for 9 years. I also teach European and Brazilian Portuguese with native-level proficiency."
+  },
+  {
+    "id": "4",
+    "name": "Yuki",
+    "surname": "Tanaka",
+    "languages": ["Japanese", "English"],
+    "levels": ["A1 Beginner", "A2 Elementary", "B1 Intermediate"],
+    "rating": 4.9,
+    "reviews": [
+      {
+        "reviewer_name": "Mike R.",
+        "reviewer_rating": 5,
+        "comment": "Yuki made Japanese feel approachable from day one. The structured approach to Hiragana and Kanji is brilliant."
+      },
+      {
+        "reviewer_name": "Lisa S.",
+        "reviewer_rating": 5,
+        "comment": "Amazing teacher! Very methodical, clear, and always encouraging."
+      }
+    ],
+    "price_per_hour": 32,
+    "lessons_done": 960,
+    "avatar_url": "https://api.dicebear.com/7.x/personas/svg?seed=Yuki&backgroundColor=c0aede",
+    "lesson_info": "I guide beginners through the foundations of Japanese writing systems and build real conversation skills step by step.",
+    "conditions": [
+      "Specializes in beginners",
+      "JLPT N5-N3 preparation",
+      "Anime & culture-based lessons available"
+    ],
+    "experience": "Tokyo-born teacher with a degree in Education. I've taught Japanese to over 300 international students over 6 years."
+  },
+  {
+    "id": "5",
+    "name": "Lena",
+    "surname": "Müller",
+    "languages": ["German", "French", "English"],
+    "levels": ["A1 Beginner", "A2 Elementary"],
+    "rating": 4.7,
+    "reviews": [
+      {
+        "reviewer_name": "David O.",
+        "reviewer_rating": 5,
+        "comment": "Lena is incredibly patient with beginners. She makes sure you understand before moving forward."
+      },
+      {
+        "reviewer_name": "Rachel N.",
+        "reviewer_rating": 4,
+        "comment": "Great lessons. Clear explanations and very structured approach."
+      }
+    ],
+    "price_per_hour": 25,
+    "lessons_done": 640,
+    "avatar_url": "https://api.dicebear.com/7.x/personas/svg?seed=Lena&backgroundColor=ffd5dc",
+    "lesson_info": "Perfect for complete beginners who want a solid foundation in German or French before moving to more advanced levels.",
+    "conditions": [
+      "Beginner specialist",
+      "Children and adults welcome",
+      "Homework and materials provided"
+    ],
+    "experience": "Certified language teacher from Berlin with 4 years of experience. I have a special passion for helping absolute beginners find their confidence."
+  },
+  {
+    "id": "6",
+    "name": "Arjun",
+    "surname": "Patel",
+    "languages": ["English", "Hindi"],
+    "levels": ["B2 Upper-Intermediate", "C1 Advanced", "C2 Proficient"],
+    "rating": 4.8,
+    "reviews": [
+      {
+        "reviewer_name": "Priya K.",
+        "reviewer_rating": 5,
+        "comment": "Arjun helped me prepare for IELTS and I scored 8.0! His methodology is effective and focused."
+      },
+      {
+        "reviewer_name": "Ben H.",
+        "reviewer_rating": 5,
+        "comment": "Excellent teacher for advanced English. He pushed me to refine my academic writing significantly."
+      }
+    ],
+    "price_per_hour": 40,
+    "lessons_done": 1820,
+    "avatar_url": "https://api.dicebear.com/7.x/personas/svg?seed=Arjun&backgroundColor=b6e3d4",
+    "lesson_info": "I specialize in advanced English for professionals and students aiming for IELTS, TOEFL, or academic writing excellence.",
+    "conditions": [
+      "Advanced learners only",
+      "IELTS/TOEFL preparation",
+      "Academic writing focus"
+    ],
+    "experience": "MA in English Literature from Oxford. 8 years of teaching experience with a focus on advanced learners and exam preparation."
+  },
+  {
+    "id": "7",
+    "name": "Camille",
+    "surname": "Dubois",
+    "languages": ["French", "Italian"],
+    "levels": ["A1 Beginner", "A2 Elementary", "B1 Intermediate", "B2 Upper-Intermediate"],
+    "rating": 4.9,
+    "reviews": [
+      {
+        "reviewer_name": "Mark T.",
+        "reviewer_rating": 5,
+        "comment": "Camille's approach to teaching French is truly unique. She incorporates French cinema and music into lessons."
+      },
+      {
+        "reviewer_name": "Julia F.",
+        "reviewer_rating": 5,
+        "comment": "I love learning French with Camille! She makes every lesson feel like a cultural journey."
+      }
+    ],
+    "price_per_hour": 33,
+    "lessons_done": 1150,
+    "avatar_url": "https://api.dicebear.com/7.x/personas/svg?seed=Camille&backgroundColor=ffd5dc",
+    "lesson_info": "My lessons combine language with culture — film, music, cuisine. You learn French and fall in love with France at the same time.",
+    "conditions": [
+      "Culture-immersive approach",
+      "DELF/DALF exam preparation",
+      "Flexible lesson topics"
+    ],
+    "experience": "Parisian French teacher with 6 years of experience. I also teach conversational Italian as a native bilingual speaker."
+  },
+  {
+    "id": "8",
+    "name": "Dmitri",
+    "surname": "Volkov",
+    "languages": ["Russian", "English"],
+    "levels": ["A1 Beginner", "A2 Elementary", "B1 Intermediate"],
+    "rating": 4.7,
+    "reviews": [
+      {
+        "reviewer_name": "Sandra L.",
+        "reviewer_rating": 5,
+        "comment": "Dmitri made the Cyrillic alphabet seem easy! His systematic approach really works."
+      },
+      {
+        "reviewer_name": "Nathan G.",
+        "reviewer_rating": 4,
+        "comment": "Very knowledgeable and patient teacher. My Russian improved a lot."
+      }
+    ],
+    "price_per_hour": 27,
+    "lessons_done": 730,
+    "avatar_url": "https://api.dicebear.com/7.x/personas/svg?seed=Dmitri&backgroundColor=d1d4f9",
+    "lesson_info": "I take students from zero to conversational Russian with a focus on practical everyday language and grammar clarity.",
+    "conditions": [
+      "Beginner to Intermediate",
+      "Business Russian available",
+      "Literature discussion classes"
+    ],
+    "experience": "Moscow-born linguist with a degree in Russian philology. 5 years of teaching Russian as a foreign language online."
+  },
+  {
+    "id": "9",
+    "name": "Mei",
+    "surname": "Chen",
+    "languages": ["Mandarin", "English"],
+    "levels": ["A1 Beginner", "A2 Elementary", "B1 Intermediate", "B2 Upper-Intermediate"],
+    "rating": 5.0,
+    "reviews": [
+      {
+        "reviewer_name": "Oliver H.",
+        "reviewer_rating": 5,
+        "comment": "Mei is phenomenal! Learning Mandarin tones seemed impossible until I met her. She has a special technique."
+      },
+      {
+        "reviewer_name": "Sophie A.",
+        "reviewer_rating": 5,
+        "comment": "Best Mandarin teacher. Incredibly structured and motivating!"
+      }
+    ],
+    "price_per_hour": 31,
+    "lessons_done": 1680,
+    "avatar_url": "https://api.dicebear.com/7.x/personas/svg?seed=Mei&backgroundColor=ffdfbf",
+    "lesson_info": "I teach Mandarin with a focus on practical communication, tones mastery, and HSK exam preparation.",
+    "conditions": [
+      "All levels welcome",
+      "HSK 1-6 preparation",
+      "Business Mandarin available"
+    ],
+    "experience": "Native Mandarin speaker from Shanghai with a TESOL certification. 7 years teaching Chinese to international students."
+  },
+  {
+    "id": "10",
+    "name": "Khalid",
+    "surname": "Al-Rashid",
+    "languages": ["Arabic", "English"],
+    "levels": ["A1 Beginner", "A2 Elementary", "B1 Intermediate"],
+    "rating": 4.8,
+    "reviews": [
+      {
+        "reviewer_name": "Emma D.",
+        "reviewer_rating": 5,
+        "comment": "Khalid made Arabic script approachable from the first lesson. Very encouraging and structured."
+      },
+      {
+        "reviewer_name": "Peter S.",
+        "reviewer_rating": 5,
+        "comment": "Excellent teaching style. He explains concepts clearly and provides great cultural context."
+      }
+    ],
+    "price_per_hour": 29,
+    "lessons_done": 890,
+    "avatar_url": "https://api.dicebear.com/7.x/personas/svg?seed=Khalid&backgroundColor=b6e3f4",
+    "lesson_info": "I teach Modern Standard Arabic and Egyptian dialect with a focus on real conversational use and script mastery.",
+    "conditions": [
+      "Beginner specialist",
+      "MSA and dialect options",
+      "Quran reading support"
+    ],
+    "experience": "Arabic linguist from Cairo with 6 years of teaching experience. I specialize in making Arabic accessible for complete beginners."
+  },
+  {
+    "id": "11",
+    "name": "Ingrid",
+    "surname": "Svensson",
+    "languages": ["Swedish", "Norwegian", "English"],
+    "levels": ["A1 Beginner", "A2 Elementary", "B1 Intermediate"],
+    "rating": 4.9,
+    "reviews": [
+      {
+        "reviewer_name": "Kevin M.",
+        "reviewer_rating": 5,
+        "comment": "Ingrid's lessons are so well-organized. Swedish grammar finally makes sense to me!"
+      },
+      {
+        "reviewer_name": "Yara T.",
+        "reviewer_rating": 5,
+        "comment": "Very professional and friendly. I love how she incorporates Scandinavian culture into lessons."
+      }
+    ],
+    "price_per_hour": 34,
+    "lessons_done": 560,
+    "avatar_url": "https://api.dicebear.com/7.x/personas/svg?seed=Ingrid&backgroundColor=c0aede",
+    "lesson_info": "I teach Swedish and Norwegian to learners interested in Scandinavian culture, work, or relocation.",
+    "conditions": [
+      "Scandinavian language specialist",
+      "All ages welcome",
+      "Relocation preparation packages"
+    ],
+    "experience": "Stockholm-based language teacher with linguistics degree. 4 years teaching Swedish and Norwegian to professionals relocating to Scandinavia."
+  },
+  {
+    "id": "12",
+    "name": "Fatima",
+    "surname": "Al-Zahrawi",
+    "languages": ["Arabic", "French", "English"],
+    "levels": ["B1 Intermediate", "B2 Upper-Intermediate", "C1 Advanced"],
+    "rating": 4.8,
+    "reviews": [
+      {
+        "reviewer_name": "Lucas C.",
+        "reviewer_rating": 5,
+        "comment": "Fatima's advanced Arabic classes pushed my fluency to a whole new level. Exceptional teacher."
+      },
+      {
+        "reviewer_name": "Maria V.",
+        "reviewer_rating": 5,
+        "comment": "She also teaches French at a native level. Brilliant multilingual teacher!"
+      }
+    ],
+    "price_per_hour": 38,
+    "lessons_done": 1040,
+    "avatar_url": "https://api.dicebear.com/7.x/personas/svg?seed=Fatima&backgroundColor=ffd5dc",
+    "lesson_info": "My advanced Arabic and French courses focus on professional communication, literature, and diplomatic language use.",
+    "conditions": [
+      "Advanced learners only",
+      "Professional language coaching",
+      "Diploma preparation"
+    ],
+    "experience": "Multilingual teacher from Casablanca. PhD candidate in Arabic linguistics. 8 years of experience in advanced language instruction."
+  }
+]

@@ -1,0 +1,268 @@
+.card {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  background-color: var(--color-bg);
+  border-radius: 24px;
+  border: 1px solid var(--color-border);
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 32px rgba(18, 20, 23, 0.08);
+  transform: translateY(-2px);
+}
+
+.avatarCol {
+  flex-shrink: 0;
+}
+
+.avatarWrapper {
+  position: relative;
+  width: 96px;
+  height: 96px;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-accent);
+}
+
+.onlineDot {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #38c86a;
+  border: 2px solid var(--color-bg);
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.nameGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.metaItem {
+  font-size: 14px;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.metaDivider {
+  width: 1px;
+  height: 16px;
+  background-color: var(--color-border);
+}
+
+.price {
+  color: #38c86a;
+}
+
+.heartBtn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  line-height: 1;
+  padding: 0 4px;
+}
+
+.heartBtn:hover {
+  transform: scale(1.2);
+  color: #e53935;
+}
+
+.heartActive {
+  color: #e53935;
+}
+
+.languages,
+.infoRow {
+  font-size: 15px;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.infoLabel {
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-right: 4px;
+}
+
+.infoValue {
+  color: var(--color-text);
+}
+
+.underline {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.levels {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.levelBadge {
+  padding: 8px 16px;
+  border-radius: 35px;
+  border: 1px solid var(--color-border);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+  background-color: transparent;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.levelBadge:hover {
+  background-color: var(--color-accent-soft);
+  border-color: var(--color-accent);
+}
+
+.readMore {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 0;
+  align-self: flex-start;
+  transition: color 0.2s ease;
+}
+
+.readMore:hover {
+  color: var(--color-accent-dark);
+}
+
+.expanded {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.experience {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.reviewerRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reviewerAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-accent-soft);
+  border: 2px solid var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+  flex-shrink: 0;
+}
+
+.reviewerName {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.reviewStars {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.reviewRating {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.reviewComment {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.bookBtn {
+  align-self: flex-start;
+  padding: 16px 48px;
+  background-color: var(--color-accent);
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #121417;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.bookBtn:hover {
+  background-color: var(--color-accent-dark);
+  transform: translateY(-2px);
+}
