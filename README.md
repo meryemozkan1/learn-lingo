@@ -1,16 +1,39 @@
-# React + Vite
+# LearnLingo | Online Language Learning & Tutors Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+LearnLingo is a modern web application designed to connect students with professional language tutors. Users can browse teachers, filter by specific criteria (language, level, hourly rate), manage favorites, and book lessons through a secure authentication system.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+- **Production URL:** [https://learn-lingo-m99x.vercel.app](https://learn-lingo-m99x.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🛠️ Tech Stack & Architecture
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Core:** React, Vite, JavaScript (ES6+)
+- **Routing:** React Router DOM v6
+- **State Management & UI State:** React Hooks, Context / Local State
+- **Backend & Database:** Firebase Authentication & Realtime Database
+- **Styling & Design:** Tailwind CSS, CSS Modules, Fully Responsive (Mobile, Tablet, Desktop)
+- **Form Validation:** React Hook Form, Yup
+- **Deployment:** Vercel
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 📋 Key Features
+
+- **User Authentication:** Secure email/password registration and login system powered by Firebase Auth, with persistent session handling.
+- **Dynamic Teacher Catalog:** Real-time data fetching from Firebase Realtime Database with pagination/listing.
+- **Advanced Filtering:** Filter tutors by spoken languages, knowledge levels (A1 to C2), and hourly rates.
+- **Favorites Module:** Add or remove tutors to personal favorites with persistent state management and a dedicated favorites view.
+- **Responsive Design:** Optimized layout and UI components supporting mobile, tablet, and desktop viewports seamlessly.
+
+---
+
+## ⚙️ Getting Started & Local Development
+
+To run this project locally, follow these steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/meryemozkan1/learn-lingo.git](https://github.com/meryemozkan1/learn-lingo.git)
+   cd learn-lingo
