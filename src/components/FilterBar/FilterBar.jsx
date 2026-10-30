@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { resetTeachers } from '../../redux/slices/teachersSlice';
-import { selectFilters, setFilter } from '../../redux/slices/filtersSlice';
+import { resetFilters, selectFilters, setFilter } from '../../redux/slices/filtersSlice';
 import styles from './FilterBar.module.css';
 
 const LANGUAGES = [
@@ -14,16 +13,20 @@ const LEVELS = [
   'B2 Upper-Intermediate', 'C1 Advanced', 'C2 Proficient',
 ];
 
-const PRICES = ['10', '20', '30', '40'];
+const PRICES = ['10', '20', '25', '30', '35', '40'];
 
-export default function FilterBar({ onFilterChange }) {
+export default function FilterBar() {
   const dispatch = useDispatch();
   const filters = useSelector(selectFilters);
 
+  const hasActiveFilters = Boolean(filters.language || filters.level || filters.price);
+
   const handleChange = (key, value) => {
     dispatch(setFilter({ key, value }));
-    dispatch(resetTeachers());
-    onFilterChange();
+  };
+
+  const handleReset = () => {
+    dispatch(resetFilters());
   };
 
   return (
@@ -72,6 +75,19 @@ export default function FilterBar({ onFilterChange }) {
           ))}
         </select>
       </div>
+
+      {hasActiveFilters && (
+        <div className={styles.resetGroup}>
+          <button
+            type="button"
+            className={styles.resetBtn}
+            onClick={handleReset}
+            title="Clear all filters"
+          >
+            ✕ Reset filters
+          </button>
+        </div>
+      )}
     </div>
   );
 }

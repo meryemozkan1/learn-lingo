@@ -1,8 +1,7 @@
-import { useCallback, useEffect } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loadTeachers, resetTeachers } from '../../redux/slices/teachersSlice';
+import { loadTeachers } from '../../redux/slices/teachersSlice';
 import {
-  selectHasMore,
   selectTeachers,
   selectTeachersError,
   selectTeachersLoading,
@@ -28,32 +27,40 @@ export default function TeachersPage() {
   const dispatch = useDispatch();
   const teachers = useSelector(selectTeachers);
   const isLoading = useSelector(selectTeachersLoading);
-  const hasMore = useSelector(selectHasMore);
   const error = useSelector(selectTeachersError);
   const filters = useSelector(selectFilters);
 
-  useEffect(() => {
-    dispatch(loadTeachers());
-    return () => {
-      dispatch(resetTeachers());
-    };
-  }, [dispatch]);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const [prevFilters, setPrevFilters] = useState(filters);
 
-  const handleFilterChange = useCallback(() => {
-    dispatch(loadTeachers());
-  }, [dispatch]);
+  // Filtreler değiştiğinde sayfalama sayacını doğrudan render sırasında 4'e sıfırla
+  if (prevFilters !== filters) {
+    setPrevFilters(filters);
+    setVisibleCount(PAGE_SIZE);
+  }
+
+  useEffect(() => {
+    if (teachers.length === 0) {
+      dispatch(loadTeachers());
+    }
+  }, [dispatch, teachers.length]);
+
+  const filteredTeachers = useMemo(() => {
+    return applyFilters(teachers, filters);
+  }, [teachers, filters]);
+
+  const visibleTeachers = filteredTeachers.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredTeachers.length;
+  const isInitialLoad = isLoading && teachers.length === 0;
 
   const handleLoadMore = () => {
-    dispatch(loadTeachers());
+    setVisibleCount((prev) => prev + PAGE_SIZE);
   };
-
-  const filteredTeachers = applyFilters(teachers, filters);
-  const isInitialLoad = isLoading && teachers.length === 0;
 
   return (
     <div className={styles.page}>
       <div className={styles.container}>
-        <FilterBar onFilterChange={handleFilterChange} />
+        <FilterBar />
 
         {error && (
           <div className={styles.error}>
@@ -68,33 +75,29 @@ export default function TeachersPage() {
                   <TeacherSkeleton />
                 </li>
               ))
-            : filteredTeachers.map((teacher) => (
+            : visibleTeachers.map((teacher) => (
                 <li key={teacher.id}>
                   <TeacherCard teacher={teacher} />
                 </li>
               ))}
         </ul>
 
-        {filteredTeachers.length === 0 && !isLoading && !error && (
+        {filteredTeachers.length === 0 && !isInitialLoad && !error && (
           <div className={styles.empty}>
-            <p>No teachers found for the selected filters.</p>
-            <p className={styles.emptyHint}>Try adjusting your search criteria.</p>
+            <p className={styles.emptyTitle}>No teachers found for the selected filters.</p>
+            <p className={styles.emptyHint}>Try adjusting or resetting your search criteria.</p>
           </div>
         )}
 
         {hasMore && !isInitialLoad && (
           <div className={styles.loadMoreWrapper}>
             <button
+              type="button"
               className={styles.loadMoreBtn}
               onClick={handleLoadMore}
-              disabled={isLoading}
               id="load-more-btn"
             >
-              {isLoading ? (
-                <span className={styles.spinner} />
-              ) : (
-                'Load more'
-              )}
+              Load more
             </button>
           </div>
         )}
