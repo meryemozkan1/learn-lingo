@@ -17,18 +17,48 @@ const firebaseConfig = {
   appId: process.env.VITE_FIREBASE_APP_ID,
 };
 
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
+async function seed() {
+  try {
+    if (!firebaseConfig.databaseURL) {
+      throw new Error(
+        'VITE_FIREBASE_DATABASE_URL ortam değişkeni tanımlı değil. Lütfen .env.local dosyanızı kontrol edin.'
+      );
+    }
 
-const teachers = JSON.parse(
-  readFileSync(join(__dirname, '../src/data/teachers.json'), 'utf-8')
-);
+    console.log('🔄 Firebase bağlantısı başlatılıyor...');
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app, firebaseConfig.databaseURL);
 
-const teachersMap = {};
-teachers.forEach((teacher) => {
-  teachersMap[teacher.id] = teacher;
-});
+    const dataPath = join(__dirname, '../src/data/teachers.json');
+    const teachers = JSON.parse(readFileSync(dataPath, 'utf-8'));
 
-await set(ref(db, 'teachers'), teachersMap);
-console.log(`✅ ${teachers.length} teachers uploaded to Firebase Realtime Database.`);
-process.exit(0);
+    console.log(
+      `📤 ${teachers.length} öğretmen Firebase Realtime Database kök düğümüne ('/') yükleniyor...`
+    );
+
+    // teachers.json doğrudan kök dizine yüklenir (Firebase Console Import JSON ile aynı yapı)
+    const uploadPromise = set(ref(db), teachers);
+    const timeoutPromise = new Promise((_, reject) =>
+      setTimeout(
+        () =>
+          reject(
+            new Error(
+              `Firebase Realtime Database bağlantısı zaman aşımına uğradı (${firebaseConfig.databaseURL}).\n` +
+                "Lütfen Firebase Console'da Realtime Database'in oluşturulduğundan ve Kurallar (Rules) kısmında yazma izninin açık olduğundan emin olun."
+            )
+          ),
+        15000
+      )
+    );
+
+    await Promise.race([uploadPromise, timeoutPromise]);
+
+    console.log(`✅ ${teachers.length} öğretmen başarıyla Firebase Realtime Database'e yüklendi.`);
+    process.exit(0);
+  } catch (error) {
+    console.error('❌ Firebase seed işlemi sırasında hata:', error.message || error);
+    process.exit(1);
+  }
+}
+
+seed();

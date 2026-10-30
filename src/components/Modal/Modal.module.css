@@ -8,6 +8,7 @@
   z-index: 1000;
   backdrop-filter: blur(4px);
   animation: fadeIn 0.2s ease;
+  padding: 16px;
 }
 
 @keyframes fadeIn {
@@ -19,9 +20,11 @@
   position: relative;
   background-color: var(--color-bg);
   border-radius: 30px;
-  padding: 64px;
+  padding: 56px;
   width: 100%;
   max-width: 566px;
+  max-height: 90vh;
+  overflow-y: auto;
   animation: slideUp 0.25s ease;
 }
 
@@ -44,9 +47,22 @@
   font-size: 18px;
   color: var(--color-text);
   border-radius: 50%;
+  cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 .closeBtn:hover {
   background-color: var(--color-border);
+}
+
+@media (max-width: 600px) {
+  .modal {
+    padding: 36px 20px 28px;
+    border-radius: 20px;
+  }
+
+  .closeBtn {
+    top: 14px;
+    right: 14px;
+  }
 }
